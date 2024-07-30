@@ -18,7 +18,7 @@ class DetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         if let horoscope = horoscope{
-            datesLabel.text = horoscope.name
+            nameLabel.text = horoscope.name
             logoImageView.image = horoscope.logo
             datesLabel.text = horoscope.dates
         }

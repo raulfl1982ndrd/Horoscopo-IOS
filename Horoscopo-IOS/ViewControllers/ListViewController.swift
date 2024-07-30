@@ -36,17 +36,7 @@ class ListViewController: UIViewController, UITableViewDataSource {
         
         return cell
     }
-    /*
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            if indexPath.row == 0 {
-                performSegue(withIdentifier: "Vegetables", sender: self)
-                } else if indexPath.row == 1 {
-                    //another VC
-                } else if indexPath.row == 2 {
-                    //Another VC
-                }
-        }
-    */
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "navigateToDetail"{
             let viewController = segue.destination as! DetailViewController
@@ -55,10 +45,5 @@ class ListViewController: UIViewController, UITableViewDataSource {
             tableView.deselectRow(at: indexPath, animated: false)
         }
     }
-    /*
-    @IBSegueAction func navigateToDetail(_ coder: NSCoder) -> DetailViewController? {
-        return DetailViewController(coder: coder)
-    }
-    */
 }
 
