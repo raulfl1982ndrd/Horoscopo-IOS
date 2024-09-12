@@ -63,6 +63,7 @@ class DetailViewController: UIViewController {
                 let luck = try await HoroscopeProvider.getHoroscopeLuck(horoscopeId: horoscope!.id)
                 
                 descriptionTextView.text = luck
+                loading.isHidden = true
             } catch {
                 print(error)
             }
